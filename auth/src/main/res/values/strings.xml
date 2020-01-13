@@ -1,0 +1,5 @@
+<resources>
+    <string name="otp_dialoge_subtitle">A Sms with your verification code has been sent to %1$s</string>
+
+    <string name="app_name">Auth</string>
+</resources>

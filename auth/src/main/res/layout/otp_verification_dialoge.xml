@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:theme="@style/AppTheme"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/back"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Back"
+
+                android:textColor="@color/colorPrimary"/>
+            <in.birdcommunication.gradienttextview.GradientTextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                app:gt_start_color="@color/colorStart"
+                app:gt_end_color="@color/colorEnd"
+                android:layout_height="wrap_content"
+                android:text="Enter Your\nVerification Code"
+                android:textSize="26sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_subtitle"
+                android:text="@string/otp_dialoge_subtitle"/>
+
+            <in.birdcommunication.auth.Components.PinView
+                android:id="@+id/pinView"
+                android:layout_gravity="center"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textStyle="bold"
+                app:cursorColor="@color/colorPrimary"
+                app:cursorWidth="2dp"
+                android:fontFamily="@font/amaranth_bold"
+                app:hideLineWhenFilled="false"
+                app:lineColor="@color/colorPrimary"
+                app:itemCount="6"
+                app:itemWidth="40dp"
+                app:viewType="line" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resend_code"
+                android:text="Resend"
+                android:fontFamily="@font/montserrat_bold"
+
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:textColor="@color/lightgrey"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

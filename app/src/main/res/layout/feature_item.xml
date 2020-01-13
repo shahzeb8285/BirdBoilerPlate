@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="7dp"
+
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content"
+    app:cardPreventCornerOverlap="false">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/ly"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:elevation="2dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/miniAvatar"
+            android:layout_height="@dimen/miniAvatar"
+            android:src="@drawable/ic_account"
+            android:id="@+id/icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/title"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Manage Students"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

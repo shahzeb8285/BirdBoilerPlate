@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Bird BoilerPlate</string>
+    <string name="enter_your_phone">Enter Your Phone</string>
+    <string name="your_phone_number">Your Phone Number</string>
+    <string name="login">Login</string>
+    <string name="confirm_your_phone">Confirm Your Phone</string>
+    <string name="otp_dialoge_subtitle">A Sms with your verification code has been sent to %1$s</string>
+    <string name="resend_code">Resend Code?</string>
+    <string name="back">&lt;Back</string>
+    <string name="add_user_title">Add User</string>
+    <string name="title_auth">Auth</string>
+
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "790517787830",
+    "firebase_url": "https://birdboilerplate-3ebde.firebaseio.com",
+    "project_id": "birdboilerplate-3ebde",
+    "storage_bucket": "birdboilerplate-3ebde.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790517787830:android:8a26d0ca87f3ace812ca17",
+        "android_client_info": {
+          "package_name": "in.birdcommunication.birdboilerplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790517787830-94fupdsk2dm81p9grovsj8oevia1qorp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.birdcommunication.birdboilerplate",
+            "certificate_hash": "0bed4c1c695eb252b2ccb39b4414f4f6e4bc4d02"
+          }
+        },
+        {
+          "client_id": "790517787830-04krj2tk7uf2uu724t6dvh1vcqa63tq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4U7eRKocQ_Ia7lZw8bFW3FUKip1rycs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790517787830-04krj2tk7uf2uu724t6dvh1vcqa63tq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

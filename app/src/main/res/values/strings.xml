@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BirdBoilerPlate</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="account">Dashboard</string>
+    <string name="bird_info"><![CDATA[We build scalable , intelligent and professional Web & Mobile applications,Websites,Marketing Services and other technological solutions to simplify lives of different businesses and people since 2016]]></string>
+    <string name="bird_address">FF-41B Behind V3S Mall,\nNirman Vihar Metro \nDelhi-110092</string>
+
+</resources>

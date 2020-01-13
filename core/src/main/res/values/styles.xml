@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+        <item name="editTextStyle">@style/EditTextStyle</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:statusBarColor" >@android:color/black</item>
+<!--        <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+
+        <item name="android:fitsSystemWindows">true</item>
+
+    </style>
+
+
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+        <item name="editTextStyle">@style/EditTextStyle</item>
+
+
+    </style>
+
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/amaranth_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="EditTextStyle" parent="android:Widget.EditText">
+        <item name="android:fontFamily">@font/amaranth_bold</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+
+    <style name="ButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/amaranth_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+
+
+    <style name="PinWidget" />
+
+    <style name="PinWidget.PinView" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="mydialog"></style>
+</resources>

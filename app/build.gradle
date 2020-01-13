@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "in.birdcommunication.birdboilerplate"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true  //ADD THIS LINE
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(":core")
+    api project(":auth")
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7'
+
+}
