@@ -36,15 +36,21 @@ public class AuthManager {
     private VerificationCallBack verificationCallBack;
     private String mVerificationId;
     private  PhoneAuthProvider.ForceResendingToken mResendToken;
-    private FirebaseAuth mAuth;
     private Activity activity;
+    private User user;
     private  PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     private AuthManager(){
         if (sSoleInstance != null){
             throw new RuntimeException("Use getInstance() method to get the single instance of this class.");
         }
+        initUser();
     }
 
+    private void initUser() {
+        user = new User();
+        user.setName("Shahzeb");
+        user.setPhone("+917210007080");
+    }
 
 
     public static AuthManager getInstance() {
@@ -118,7 +124,6 @@ public class AuthManager {
                 mResendToken = forceResendingToken;
             }
         };
-
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 mobile,
                 60,
@@ -137,13 +142,14 @@ public class AuthManager {
     }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
-        mAuth.signInWithCredential(credential)
+        FirebaseAuth.getInstance().signInWithCredential(credential)
                 .addOnCompleteListener(activity, task -> {
                     if (task.isSuccessful()) {
                         //verification successful we will start the profile activity
                         if(verificationCallBack !=null){
                             verificationCallBack.onVerificationDone();
                         }
+                        initUser();
 
                     } else {
 
@@ -164,13 +170,23 @@ public class AuthManager {
     }
 
     public void logout() {
+        user = null;
         FirebaseAuth.getInstance().signOut();
         BirdCore.getInstance().deleteAllData();
     }
 
     public String getName() {
-        return "Shahzeb";
+        if(user!=null){
+            return user.getName();
+        }
+        return "";
+    }
 
+    public String getPhone() {
+        if(user!=null){
+            return user.getPhone();
+        }
+        return "";
     }
 
 

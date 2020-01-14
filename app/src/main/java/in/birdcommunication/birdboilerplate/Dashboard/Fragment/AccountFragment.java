@@ -39,30 +39,15 @@ public class AccountFragment extends Fragment implements FlexibleAdapter.OnItemC
 
     private void initView(View v) {
         CircleImageView circleImageView = v.findViewById(R.id.avatar);
-        circleImageView.setImageDrawable(getContext().getResources().getDrawable(R.drawable.ic_account));
-        TextView nameTV = v.findViewById(R.id.name);
-        nameTV.setOnClickListener(view -> {
-            Intent intent = new Intent(getContext(), RegisterActivity.class);
-            startActivity(intent);
-        });
+        circleImageView.setImageDrawable(getContext().getResources().getDrawable(R.drawable.ic_cool));
+        TextView mPhoneTv = v.findViewById(R.id.phone);
+        TextView mNameTV = v.findViewById(R.id.name);
+        mPhoneTv.setText(AuthManager.getInstance().getPhone());
+        mNameTV.setText(AuthManager.getInstance().getName());
         recyclerView = v.findViewById(R.id.recyclerView);
-        nameTV.setText(AuthManager.getInstance().getName());
         initRecyclerView();
     }
 
-    private String getWish(){
-        Calendar calendar = Calendar.getInstance();
-        int timeOfDay = calendar.get(Calendar.HOUR_OF_DAY);
-        if(timeOfDay < 12){
-            return "Good Morning";
-        }else if(timeOfDay < 16){
-            return "Good Afternoon";
-        }else if(timeOfDay < 21){
-            return "Good Evening";
-        }else {
-            return "Good Night";
-        }
-    }
     private void initRecyclerView(){
         list = getItems();
         if(mAdapter == null){
@@ -70,14 +55,9 @@ public class AccountFragment extends Fragment implements FlexibleAdapter.OnItemC
         }else{
             mAdapter.addItems(0,list);
         }
-
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(mAdapter);
-//        EmptyViewHelper.create(mAdapter,
-//                getView().findViewById(R.id.empty_view),
-//                getView().findViewById(R.id.filter_view));
         recyclerView.setNestedScrollingEnabled(false);
-
         mAdapter.addListener(this);
 
     }
@@ -99,8 +79,6 @@ public class AccountFragment extends Fragment implements FlexibleAdapter.OnItemC
                 "V1",
                 getContext().getResources().getDrawable(R.drawable.ic_dot),
                 true));
-
-        //start colorA400 end color 600 from https://www.materialpalette.com/colors
         return list;
     }
 
@@ -119,7 +97,6 @@ public class AccountFragment extends Fragment implements FlexibleAdapter.OnItemC
 
                 case Constants.CURRENT_VERSION:
                     break;
-
             }
             if(intent !=null){
                 Objects.requireNonNull(getContext()).startActivity(intent);

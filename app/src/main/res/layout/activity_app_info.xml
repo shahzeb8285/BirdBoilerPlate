@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:theme="@style/NormalTheme"
     android:layout_width="match_parent"
     android:background="@color/normalBackground"
     android:layout_height="match_parent">
@@ -157,10 +158,14 @@
 
         </LinearLayout>
 
-    <TextView
+    <in.birdcommunication.gradienttextview.GradientTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="or get in touch with us"/>
 
     <androidx.cardview.widget.CardView
