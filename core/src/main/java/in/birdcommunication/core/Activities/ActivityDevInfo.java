@@ -1,4 +1,4 @@
-package in.birdcommunication.birdboilerplate.Feature;
+package in.birdcommunication.core.Activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,14 +8,14 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import java.util.Objects;
 
-import in.birdcommunication.auth.RouteActivity;
-import in.birdcommunication.birdboilerplate.R;
+import in.birdcommunication.core.R;
 
-public class ActivityDevInfo extends RouteActivity {
+public class ActivityDevInfo extends AppCompatActivity  implements View.OnClickListener {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,6 @@ public class ActivityDevInfo extends RouteActivity {
         initViews();
     }
 
-    @Override
     public void initViews() {
         findViewById(R.id.gmail).setOnClickListener(this);
         findViewById(R.id.fb).setOnClickListener(this);
@@ -58,34 +57,23 @@ public class ActivityDevInfo extends RouteActivity {
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.gmail:
-                email();
-                break;
-            case R.id.fb:
-                goToSite("https://www.facebook.com/commbird");
-                break;
-            case R.id.twitter:
-                goToSite("https://twitter.com/commbird");
-                break;
-            case R.id.instagram:
-                goToSite("https://www.instagram.com/birdcommunication/");
-                break;
-            case R.id.website:
-                goToSite("https://www.birdcommunication.in");
-                break;
-            case R.id.whatsapp:
-                goToSite("https://wa.me/917210007080");
-                break;
-            case R.id.address:
-                goToSite("https://g.page/bird-communication?gm");
-                break;
-            case R.id.phone1:
-            case R.id.phone2:
-            case R.id.phone3:
-                dial(((TextView)view).getText().toString());
-                break;
-
+        int id = view.getId();
+        if (id == R.id.gmail) {
+            email();
+        } else if (id == R.id.fb) {
+            goToSite("https://www.facebook.com/commbird");
+        } else if (id == R.id.twitter) {
+            goToSite("https://twitter.com/commbird");
+        } else if (id == R.id.instagram) {
+            goToSite("https://www.instagram.com/birdcommunication/");
+        } else if (id == R.id.website) {
+            goToSite("https://www.birdcommunication.in");
+        } else if (id == R.id.whatsapp) {
+            goToSite("https://wa.me/917210007080");
+        } else if (id == R.id.address) {
+            goToSite("https://g.page/bird-communication?gm");
+        } else if (id == R.id.phone1 || id == R.id.phone2 || id == R.id.phone3) {
+            dial(((TextView) view).getText().toString());
         }
 
 

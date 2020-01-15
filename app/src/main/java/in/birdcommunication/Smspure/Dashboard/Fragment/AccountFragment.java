@@ -1,4 +1,4 @@
-package in.birdcommunication.birdboilerplate.Dashboard.Fragment;
+package in.birdcommunication.Smspure.Dashboard.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,17 +12,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import eu.davidea.flexibleadapter.FlexibleAdapter;
 import in.birdcommunication.auth.Manager.AuthManager;
-import in.birdcommunication.auth.RegisterActivity;
-import in.birdcommunication.birdboilerplate.Feature.ActivityDevInfo;
-import in.birdcommunication.birdboilerplate.Model.FeatureItem;
-import in.birdcommunication.birdboilerplate.R;
+import in.birdcommunication.Smspure.Model.FeatureItem;
+import in.birdcommunication.Smspure.R;
+import in.birdcommunication.core.Activities.ActivityDevInfo;
 import in.birdcommunication.core.Utils.Constants;
 
 public class AccountFragment extends Fragment implements FlexibleAdapter.OnItemClickListener{

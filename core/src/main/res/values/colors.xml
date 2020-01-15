@@ -8,6 +8,7 @@
     <color name="grey">#2C2C2C</color>
     <color name="darkBlueColor">#2e2e49</color>
     <color name="lightgrey">#5E5E5E</color>
+    <color name="normalBackground">#F6F2F8</color>
 
 
 </resources>

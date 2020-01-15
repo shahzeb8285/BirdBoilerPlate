@@ -1,4 +1,4 @@
-package in.birdcommunication.birdboilerplate;
+package in.birdcommunication.Smspure;
 
 import android.content.Context;
 

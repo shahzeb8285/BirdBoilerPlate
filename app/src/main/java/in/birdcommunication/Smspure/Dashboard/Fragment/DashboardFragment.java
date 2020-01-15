@@ -1,23 +1,15 @@
-package in.birdcommunication.birdboilerplate.Dashboard.Fragment;
+package in.birdcommunication.Smspure.Dashboard.Fragment;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Shader;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -26,15 +18,12 @@ import java.util.List;
 import eu.davidea.flexibleadapter.FlexibleAdapter;
 import in.birdcommunication.auth.Manager.AuthManager;
 import in.birdcommunication.auth.RegisterActivity;
-import in.birdcommunication.birdboilerplate.Dashboard.DashboardActivity;
-import in.birdcommunication.birdboilerplate.Model.FeatureItem;
-import in.birdcommunication.birdboilerplate.R;
-import in.birdcommunication.core.Utils.EmptyViewHelper;
+import in.birdcommunication.Smspure.Model.FeatureItem;
+import in.birdcommunication.Smspure.R;
 
 public class DashboardFragment extends Fragment {
     private RecyclerView recyclerView;
     private FlexibleAdapter<FeatureItem> mAdapter;
-    private List<FeatureItem> list;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -46,16 +35,11 @@ public class DashboardFragment extends Fragment {
     private void initView(View v) {
         TextView wishTv = v.findViewById(R.id.wish);
         TextView nameTV = v.findViewById(R.id.name);
-        nameTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), RegisterActivity.class);
-                startActivity(intent);
-            }
+        nameTV.setOnClickListener(view -> {
+            Intent intent = new Intent(getContext(), RegisterActivity.class);
+            startActivity(intent);
         });
         recyclerView = v.findViewById(R.id.recyclerView);
-
-        Log.i("Ddd", "initView: "+getWish());
         wishTv.setText(getWish());
         nameTV.setText(AuthManager.getInstance().getName());
         initRecyclerView();
@@ -75,11 +59,11 @@ public class DashboardFragment extends Fragment {
         }
     }
     private void initRecyclerView(){
-        list = getItems();
+        List<FeatureItem> list = getItems();
         if(mAdapter == null){
             mAdapter = new FlexibleAdapter<>(list);
         }else{
-            mAdapter.addItems(0,list);
+            mAdapter.addItems(0, list);
         }
 
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));

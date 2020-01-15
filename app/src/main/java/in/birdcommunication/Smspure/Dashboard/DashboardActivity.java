@@ -1,4 +1,4 @@
-package in.birdcommunication.birdboilerplate.Dashboard;
+package in.birdcommunication.Smspure.Dashboard;
 
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import in.birdcommunication.auth.RouteActivity;
-import in.birdcommunication.birdboilerplate.Dashboard.Fragment.AccountFragment;
-import in.birdcommunication.birdboilerplate.Dashboard.Fragment.DashboardFragment;
-import in.birdcommunication.birdboilerplate.R;
-import me.ibrahimsn.lib.OnItemSelectedListener;
+import in.birdcommunication.Smspure.Dashboard.Fragment.AccountFragment;
+import in.birdcommunication.Smspure.Dashboard.Fragment.DashboardFragment;
+import in.birdcommunication.Smspure.R;
 import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class DashboardActivity extends RouteActivity {

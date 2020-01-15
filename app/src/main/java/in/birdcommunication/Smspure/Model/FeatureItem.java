@@ -1,6 +1,5 @@
-package in.birdcommunication.birdboilerplate.Model;
+package in.birdcommunication.Smspure.Model;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
@@ -9,8 +8,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.List;
 
 import eu.davidea.flexibleadapter.FlexibleAdapter;
@@ -18,9 +15,7 @@ import eu.davidea.flexibleadapter.items.AbstractFlexibleItem;
 import eu.davidea.flexibleadapter.items.IFilterable;
 import eu.davidea.flexibleadapter.items.IFlexible;
 import eu.davidea.viewholders.FlexibleViewHolder;
-import in.birdcommunication.birdboilerplate.Application;
-import in.birdcommunication.birdboilerplate.R;
-import in.birdcommunication.core.Utils.UtilsManager;
+import in.birdcommunication.Smspure.R;
 
 
 public class FeatureItem extends AbstractFlexibleItem<FeatureItem.ViewHolder> implements IFilterable<String> {
